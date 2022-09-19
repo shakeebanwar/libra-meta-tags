@@ -1,0 +1,18 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "esm": "^3.2.25",
+    "nodemon": "^2.0.19",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "scripts": {
+   
+    "server": "node index.js",
+    "dev": "nodemon -r esm index.js"
+  }
+}
