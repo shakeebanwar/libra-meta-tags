@@ -85,7 +85,7 @@ app.get('*', function (request, response) {
         .replace('__META_OG_TITLE__', topicname)
         .replace('__META_OG_DESCRIPTION__', coursename)
         .replace('__META_DESCRIPTION__', topicname)
-        .replace('__META_OG_IMAGE__', "https://images.unsplash.com/photo-1593642532400-2682810df593?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80")
+        .replace('__META_OG_IMAGE__', img)
   
   
         response.send(data);
