@@ -91,7 +91,8 @@ app.get('*', function (request, response) {
         .replace('__META_OG_TITLE__', topicname)
         .replace('__META_OG_DESCRIPTION__', coursename)
         .replace('__META_DESCRIPTION__', topicname)
-        .replace('__META_OG_IMAGE__', img)
+        //.replace('__META_OG_IMAGE__', img)
+        .replace('__META_OG_IMAGE__', "https://github.githubassets.com/images/modules/open_graph/github-octocat.png")
   
   
         response.send(data);
