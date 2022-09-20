@@ -64,7 +64,7 @@ app.use(express.static(path.resolve(__dirname, './build')));
 
 app.get('*', function (request, response) {
 
-
+    console.log(request.query)
  
   
   const filePath = path.resolve(__dirname, './build', 'index.html');
@@ -77,7 +77,13 @@ app.get('*', function (request, response) {
       let baseurl = "https://api.libraa.ml/media/MainSlideImages/"
       const coursename = request.path.split('/')[3]
       const topicname = request.path.split('/')[4]
-      const img = baseurl + request.path.split('/')[request.path.split('/').length - 1]
+      let img = ""
+      if (request.query){
+        img = baseurl + request.query.img
+
+      }
+
+      
       data = data.replace(
         "<title>React App</title>",
         `<title>git hub</title>`
