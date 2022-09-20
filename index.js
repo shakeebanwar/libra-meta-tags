@@ -73,8 +73,11 @@ app.get('*', function (request, response) {
 
     if(request.path.startsWith('/detailpage')){
 
+
+      let baseurl = "https://api.libraa.ml/media/MainSlideImages/"
       const coursename = request.path.split('/')[3]
       const topicname = request.path.split('/')[4]
+      const img = baseurl + request.path.split('/')[request.path.split('/').length - 1]
       data = data.replace(
         "<title>React App</title>",
         `<title>git hub</title>`
